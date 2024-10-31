@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Usuario - Gestor de Archivos</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles_login.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center">
+            <h2>Crear Usuario</h2>
+            <form id="crearUsuarioForm" onsubmit="event.preventDefault(); crearUsuario();">
+                <input type="email" id="nuevo-email" placeholder="Correo electrónico" required>
+                <input type="password" id="nueva-password" placeholder="Contraseña" required>
+                <select id="departamento" required>
+                    <option value="" disabled selected>Selecciona tu departamento</option>
+                    <option value="Proyectos">Proyectos</option>
+                    <option value="Administracion">Administración</option>
+                    <option value="Planificacion">Planificación</option>
+                    <option value="Financiero">Financiero</option>
+                    <option value="Dep. Cartera">Dep. Cartera</option>
+                    <option value="Dep. Social">Dep. Social</option>
+                    <option value="Dep. Juridico">Dep. Jurídico</option>
+                    <option value="Dep. Catastro">Dep. Catastro</option>
+                    <option value="Archivo General">Archivo General</option>
+                </select>
+
+                <button type="submit">Crear Usuario</button>
+                <p id="error-message" class="error"></p> <!-- Mensaje de error -->
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script_crear_usuario.js"></script> <!-- Enlace al archivo JS -->
+</body>
+</html>
